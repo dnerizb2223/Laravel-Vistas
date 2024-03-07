@@ -1,4 +1,20 @@
-nav{
-    text-decoration: none;
-    background-color: #2C3E50 !important;
+body {
+    padding-top: 70px;
+}
+
+.container {
+    max-width: 800px;
+}
+
+section {
+    margin-top: 20px;
+}
+
+/* Personaliza los estilos según tus preferencias */
+h2 {
+    color: #333;
+}
+
+p {
+    color: #666;
 }
