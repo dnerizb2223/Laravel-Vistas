@@ -11,7 +11,7 @@
 <body>
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#"><img src="../../../resources/media/descarga.png" alt="foto-politecnics" class="foto-politecnics"></a>
+    <a class="navbar-brand" href="{{ url('/ABP_david_neriz/public/')}}"><img src="{{ asset('/media/descarga.png') }}"  alt="foto-politecnics" class="foto-politecnics"></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -22,8 +22,8 @@
             Dades Mestres
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="../public/cicles">Cicles</a></li> <!-- Corregido el enlace -->
-            <li><a class="dropdown-item" href="../public/cursos">Cursos</a></li>
+            <li><a class="dropdown-item" href="{{ url('/ABP_david_neriz/public/cicles')}}">Cicles</a></li>
+            <li><a class="dropdown-item" href="{{ url('/ABP_david_neriz/public/cursos')}}">Cursos</a></li>
           </ul>
         </li>
     </div>

@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CicleController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,22 +14,22 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
-Route::get('/saludo/{nombre?}', function ($nombre = "david"){
-    return "Hola " . $nombre;
-})->name('saludo');
+// Route::get('/saludo/{nombre?}', function ($nombre = "david"){
+//     return "Hola " . $nombre;
+// })->name('saludo');
 
-Route::get('/rutes/public/parametre/{num1}/{num2}', function ($num1, $num2) {
-    $suma = $num1 + $num2;
-    return "La suma de $num1 i $num2 és: $suma";
-})->name('suma');
+// Route::get('/rutes/public/parametre/{num1}/{num2}', function ($num1, $num2) {
+//     $suma = $num1 + $num2;
+//     return "La suma de $num1 i $num2 és: $suma";
+// })->name('suma');
     
 
 Route::get('/ABP_david_neriz/public/', function () {
-    return View::make('index');
+    return View::make('layouts.principal');
 });
 
 Route::get('/ABP_david_neriz/public/cicles', function () {
@@ -49,3 +50,5 @@ Route::get('/ABP_david_neriz/public/cursos', function () {
 
     return View::make('cursos.index', compact('cursos'));
 });
+
+Route::resource('cicle', CicleController::class);
